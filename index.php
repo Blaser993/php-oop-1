@@ -4,15 +4,15 @@ require_once __DIR__."./models/Movie.php";
 
 
 
-$movie1 = new Movie("comico");
+$movie1 = new Movie(0);
 $movie1->titolo = "Fantozzi";
-// $movie1->genere = "Comico";
+$movie1->genere = "Comico";
 
 
 
-$movie2 = new Movie("fantasy");
+$movie2 = new Movie(1);
 $movie2->titolo = "Cenerentola";
-// $movie2->genere = "Fantasy";
+$movie2->genere = "Fantasy";
 
 var_dump($movie1, $movie2);
 
