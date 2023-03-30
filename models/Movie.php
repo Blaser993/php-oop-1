@@ -1,5 +1,7 @@
 <?php
 
+$generi = ["Comico","Avventura","Tragedia","Fantasy","Animazione"];
+
 class Movie {
     public $titolo;
     public $genere;

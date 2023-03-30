@@ -7,13 +7,13 @@ require_once __DIR__."./models/Movie.php";
 $movie1 = new Movie("italiano");
 $movie1->setLenguage(true);
 $movie1->titolo = "Fantozzi";
-$movie1->genere = "Comico";
+$movie1->genere = $generi[0];
 
 
 
 $movie2 = new Movie("koreano");
 $movie2->titolo = "Cenerentola";
-$movie2->genere = "Fantasy";
+$movie2->genere = $generi[3]." - ".$generi[4]." - ".$generi[1];
 
 
 
