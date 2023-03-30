@@ -15,7 +15,6 @@ $movie2 = new Movie("koreano");
 $movie2->titolo = "Cenerentola";
 $movie2->genere = "Fantasy";
 
-var_dump($movie1, $movie2);
 
 
 ?>
@@ -33,6 +32,40 @@ var_dump($movie1, $movie2);
     <title>Film</title>
 </head>
 <body>
-    
+    <div class="film">
+        <h1>
+            <?php
+            echo $movie1->titolo
+            ?>
+        </h1>
+        <p>
+            <?php
+            echo $movie1->genere
+            ?>
+        </p>
+        <p>
+            <?php
+            echo $movie1->lingua
+            ?>
+        </p>
+    </div>
+
+    <div class="film">
+        <h1>
+            <?php
+            echo $movie2->titolo
+            ?>
+        </h1>
+        <p>
+            <?php
+            echo $movie2->genere
+            ?>
+        </p>
+        <p>
+            <?php
+            echo $movie2->lingua
+            ?>
+        </p>
+    </div>
 </body>
 </html>
