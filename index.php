@@ -2,7 +2,7 @@
 
 require_once __DIR__."./metods/Movie.php";
 
-var_dump($movie1);
+var_dump($movie1, $movie2);
 
 
 ?>
