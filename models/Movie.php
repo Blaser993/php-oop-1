@@ -1,10 +1,10 @@
 <?php
 
-$generi = ["Comico","Avventura","Tragedia","Fantasy","Animazione"];
+
 
 class Movie {
     public $titolo;
-    public $genere;
+    public $genere=[];
     public $lingua;
 
     function __construct($_lingua) {
@@ -13,8 +13,12 @@ class Movie {
 
     function setLenguage($lingua) {
         if($lingua === true){
-            $this->lingua = "lingua originale";
+            $this->lingua = $this->lingua.", lingua originale";
         }
+    }
+
+    function setGeneri($generi){
+        $this->genere=$generi;
     }
 
     function getLenguage(){

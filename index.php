@@ -2,20 +2,14 @@
 
 require_once __DIR__."./models/Movie.php";
 
-
-
-$movie1 = new Movie("italiano");
+$movie1 = new Movie("Italiano");
 $movie1->setLenguage(true);
 $movie1->titolo = "Fantozzi";
-$movie1->genere = $generi[0];
+$movie1->setGeneri(["Commedia"]);
 
-
-
-$movie2 = new Movie("koreano");
+$movie2 = new Movie("Koreano");
 $movie2->titolo = "Cenerentola";
-$movie2->genere = $generi[3]." - ".$generi[4]." - ".$generi[1];
-
-
+$movie2->setGeneri(["Fantasy","avventura"]);
 
 ?>
 
@@ -35,17 +29,19 @@ $movie2->genere = $generi[3]." - ".$generi[4]." - ".$generi[1];
     <div class="film">
         <h1>
             <?php
-            echo $movie1->titolo
+            echo $movie1->titolo;
             ?>
         </h1>
         <p>
             <?php
-            echo $movie1->genere
+            for($i=0; $i < count($movie1->genere); $i++){
+                echo $movie1->genere[$i]." ";
+            }
             ?>
         </p>
         <p>
             <?php
-            echo $movie1->lingua
+            echo $movie1->lingua;
             ?>
         </p>
     </div>
@@ -53,17 +49,19 @@ $movie2->genere = $generi[3]." - ".$generi[4]." - ".$generi[1];
     <div class="film">
         <h1>
             <?php
-            echo $movie2->titolo
+            echo $movie2->titolo;
             ?>
         </h1>
         <p>
             <?php
-            echo $movie2->genere
+            for($i=0; $i < count($movie2->genere); $i++){
+                echo $movie2->genere[$i]." ";
+            }
             ?>
         </p>
         <p>
             <?php
-            echo $movie2->lingua
+            echo $movie2->lingua;
             ?>
         </p>
     </div>
