@@ -3,19 +3,19 @@
 class Movie {
     public $titolo;
     public $genere;
-    public bool $lingua;
+    public $lingua;
 
     function __construct($_lingua) {
         $this->lingua = $_lingua;
     }
 
-    function public setLenguage($lingua) {
+    function setLenguage($lingua) {
         if($lingua === true){
             $this->lingua = "lingua originale";
         }
     }
 
-    function public getLenguage(){
+    function getLenguage(){
         return $this->lingua;
     }
 
